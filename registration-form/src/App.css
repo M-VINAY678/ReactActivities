@@ -1,0 +1,16 @@
+.error-message , .passwordStrength-weak{
+    color: red;
+    font-size: 0.8rem;
+    
+}
+.passwordStrength-medium{
+   color:blue;
+   font-size: 0.8rem;
+}
+.passwordStrength-strong{
+   color:green;
+   font-size: 0.8rem;
+}
+.submited{
+    color: green;
+}
