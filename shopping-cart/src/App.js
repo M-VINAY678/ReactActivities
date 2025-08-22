@@ -7,10 +7,9 @@ function Productlist() {
 
   return (
     Object.values(products).map((product) => (
-      <li>{product.name + "     " + product.price + "    "}
+      <li key={product.id}>{product.name + "     " + product.price + "    "}
         <button onClick={(e) => {
           addItem(product);
-          console.log(product.name);
         }}>
           ADD TO CART</button></li>
     ))
@@ -19,7 +18,7 @@ function Productlist() {
 function Cart() {
   const { items, removeItem } = useContext(CartContext);
   return (Object.values(items).map((item) => (
-    <li>{item.name + "     " + item.price + "    " + item.quantity}
+    <li key={item.id}>{item.name + "     " + item.price + "    " + item.quantity}
       <button onClick={(e) => {
         removeItem(item.id);
         console.log(item.name);
